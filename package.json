@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && nodemon dist/server.js"
+    "start": "node dist/server.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
