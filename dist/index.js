@@ -93,4 +93,4 @@ const startServer = () => {
         server.close(() => process.exit(1));
     });
 };
-//# sourceMappingURL=server.js.map
+//# sourceMappingURL=index.js.map

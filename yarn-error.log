@@ -35,7 +35,7 @@ npm manifest:
     "type": "module",
     "scripts": {
       "build": "tsc",
-      "start": "tsc && nodemon dist/server.js"
+      "start": "tsc && nodemon dist/index.js"
     },
     "devDependencies": {
       "@types/express": "^4.17.17",
