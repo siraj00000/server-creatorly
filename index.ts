@@ -3,26 +3,26 @@ import http from 'http';
 import Logging from './library/Logging.mjs';
 import mongoose from 'mongoose';
 import cloudinary from 'cloudinary';
-import { config } from './config/config.js';
-import { errorHandler } from './middleware/error_handler.middleware.js';
+import { config } from './src/config/config.js';
+import { errorHandler } from './src/middleware/error_handler.middleware.js';
 
 // Routes
-import userRouter from './routers/user.router.js';
-import creatorOnlinePresenceRouter from './routers/creatorRoutes/creatorOnlinePresence.router.js';
-import brandOrAgencyOnlinePresenceRouter from './routers/brandOrAgencyRoutes/brandOrAgencyOnlinePresence.router.js';
-import campaignRouter from './routers/brandOrAgencyRoutes/campaign.router.js';
-import creatorCustomLinkRouter from './routers/creatorRoutes/creatorCustomLink.router.js';
-import myBrandRouter from './routers/brandOrAgencyRoutes/myBrand.router.js';
-import profileRouter from './routers/userRouters/profile.router.js';
-import discoverCreatorRouter from './routers/brandOrAgencyRoutes/discoverCreators.router.js';
-import singleCreatorCampaignRouter from './routers/brandOrAgencyRoutes/campaign_routers/singleCreatorCampaign.router.js';
-import multiCreatorCampaignRouter from './routers/brandOrAgencyRoutes/campaign_routers/mulitCreatorCampaign.router.js';
-import combinedCampaignRouter from './routers/brandOrAgencyRoutes/campaign_routers/combinedCampaign.router.js';
-import statsRouter from './routers/statisticsRoutes/adminStatistics.router.js';
-import invoiceRouter from './routers/creatorRoutes/invoice.router.js';
-import visitorRouter from './routers/creatorRoutes/visitor.router.js';
-import creatorStatsRouter from './routers/statisticsRoutes/creatorStatistics.router.js';
-import brandStatsRouter from './routers/statisticsRoutes/brandStatistics.router.js';
+import userRouter from './src/routers/user.router.js';
+import creatorOnlinePresenceRouter from './src/routers/creatorRoutes/creatorOnlinePresence.router.js';
+import brandOrAgencyOnlinePresenceRouter from './src/routers/brandOrAgencyRoutes/brandOrAgencyOnlinePresence.router.js';
+import campaignRouter from './src/routers/brandOrAgencyRoutes/campaign.router.js';
+import creatorCustomLinkRouter from './src/routers/creatorRoutes/creatorCustomLink.router.js';
+import myBrandRouter from './src/routers/brandOrAgencyRoutes/myBrand.router.js';
+import profileRouter from './src/routers/userRouters/profile.router.js';
+import discoverCreatorRouter from './src/routers/brandOrAgencyRoutes/discoverCreators.router.js';
+import singleCreatorCampaignRouter from './src/routers/brandOrAgencyRoutes/campaign_routers/singleCreatorCampaign.router.js';
+import multiCreatorCampaignRouter from './src/routers/brandOrAgencyRoutes/campaign_routers/mulitCreatorCampaign.router.js';
+import combinedCampaignRouter from './src/routers/brandOrAgencyRoutes/campaign_routers/combinedCampaign.router.js';
+import statsRouter from './src/routers/statisticsRoutes/adminStatistics.router.js';
+import invoiceRouter from './src/routers/creatorRoutes/invoice.router.js';
+import visitorRouter from './src/routers/creatorRoutes/visitor.router.js';
+import creatorStatsRouter from './src/routers/statisticsRoutes/creatorStatistics.router.js';
+import brandStatsRouter from './src/routers/statisticsRoutes/brandStatistics.router.js';
 
 cloudinary.v2.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -95,7 +95,6 @@ const startServer = () => {
     router.use('/api', statsRouter);
     router.use('/api', creatorStatsRouter);
     router.use('/api', brandStatsRouter);
-
 
     /* Health Check */
     router.get('/ping', (req, res) => res.status(200).json({ message: 'pong' }));
