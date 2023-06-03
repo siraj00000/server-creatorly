@@ -96,17 +96,19 @@ const startServer = () => {
     router.use('/api', creatorStatsRouter);
     router.use('/api', brandStatsRouter);
 
-
     /* Health Check */
     router.get('/ping', (req, res) => res.status(200).json({ message: 'pong' }));
 
     /* Error handling */
     router.use(errorHandler);
 
-    const server = http.createServer(router).listen(config.server.port, () => Logging.info(`Server is running on port ${config.server.port}`));
+    const server: http.Server = http.createServer(router).listen(config.server.port, () => Logging.info(`Server is running on port ${config.server.port}`));
 
     process.on('unhandledRejection', (err, promise) => {
         console.log(`Logged Error ${err}`);
         server.close(() => process.exit(1));
     });
 };
+
+export default startServer
+ 
