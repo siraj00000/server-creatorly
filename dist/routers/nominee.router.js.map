@@ -1,0 +1,1 @@
+{"version":3,"file":"nominee.router.js","sourceRoot":"","sources":["../../src/routers/nominee.router.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,SAAS,CAAC;AACjC,OAAO,iBAAiB,MAAM,sCAAsC,CAAC;AACrE,MAAM,MAAM,GAAG,MAAM,EAAE,CAAC;AAExB,MAAM;KACD,IAAI,CAAC,UAAU,EAAE,iBAAiB,CAAC,aAAa,CAAC;KACjD,GAAG,CAAC,UAAU,EAAE,iBAAiB,CAAC,aAAa,CAAC,CAAC;AAEtD,eAAe,MAAM,CAAC"}

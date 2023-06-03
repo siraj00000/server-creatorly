@@ -1,0 +1,1 @@
+{"version":3,"file":"validateMimeType.js","sourceRoot":"","sources":["../../src/utils/validateMimeType.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,gBAAgB,GAAG,CAAC,QAAgB,EAAE,EAAE;IACjD,MAAM,gBAAgB,GAAG,CAAC,YAAY,EAAE,WAAW,EAAE,WAAW,EAAE,eAAe,CAAC,CAAC;IACnF,IAAI,gBAAgB,CAAC,QAAQ,CAAC,QAAQ,CAAC,EAAE;QACrC,OAAO,IAAI,CAAC;KACf;IAED,OAAO,KAAK,CAAC;AACjB,CAAC,CAAC"}
